@@ -19,6 +19,7 @@ A basic Url shortener built using Node.js, Mongodb, and Bootstrap 4.
 ---
 
 ```Node
+clone this repo
 npm i
 npm run start
 ```
