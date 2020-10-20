@@ -27,4 +27,4 @@ visit http://localhost:5000 on your browser.
 
 > Preview
 
-![application preview](urlshortener-preview.png)
+![application preview](urlshortener-prerview.png)
