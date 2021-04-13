@@ -36,7 +36,7 @@ A Node application to minify the URL links and save the minified urls to the Man
 
 ## Preview
 
-![application preview](urlshortener-prerview.png)
+![application preview](.\assets\applicationPreview.gif)
 
 ## [Application Info](https://github.com/akashchouhan16/Url-Shortener#readme "Url-Minifier")
 
