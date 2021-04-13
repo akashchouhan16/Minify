@@ -1,11 +1,21 @@
 const express = require("express");
 const app = express();
 const mongoose  = require("mongoose");
+
+// ENV config
+require('dotenv').config();
+//Import DB Model
 const ShortUrl = require("./models/shortUrl");
-mongoose.connect("mongodb://localhost/urlShortener",{
-    useNewUrlParser : true, useUnifiedTopology:true
-})
-PORT = 5000 || process.env.PORT;
+// Connection to DB.
+mongoose.connect(process.env.MONGO_URI,
+ {
+    useNewUrlParser : true,
+    useUnifiedTopology:true
+ }, ()=>{
+     console.log(`Database Connection established!`);
+ });
+
+const PORT = 5000 || process.env.PORT;
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: false}))
 
@@ -29,5 +39,10 @@ app.get("/:shortUrl", async(req,res)=>{
 })
 
 app.listen(PORT, (req,res)=>{
-    console.log("Server is up and running on PORT: 5000..\n");
+    const listenLog = {
+        PORT : PORT,
+        LOG : `Server is up and running on PORT :  ${PORT}`,
+        URL : "http://localhost:5000/"
+    }
+    console.table(listenLog);
 })
