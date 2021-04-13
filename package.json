@@ -1,13 +1,13 @@
 {
-  "name": "url-minifer",
+  "name": "url-minifier",
   "version": "1.0.0",
-  "description": "A node application to create minfied lins to sites and save them to Database.",
+  "description": "A node application to create minified links to websites and save them to Database.",
   "main": "server.js",
   "scripts": {
     "dev" : "nodemon server.js",
     "start": " node server.js"
   },
-      "repository": {
+  "repository": {
     "type": "git",
     "url": "git+https://github.com/akashchouhan16/URL-Minifier"
   },
